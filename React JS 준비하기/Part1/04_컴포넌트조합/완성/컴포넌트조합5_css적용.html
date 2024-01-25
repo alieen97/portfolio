@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+div { border:3px dashed #ccc; }
+
+.gnb li { color:skyblue; }
+.gnb li.s1 { color:orange; }
+</style>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<script type="text/babel">
+
+
+
+
+	class Header extends React.Component {
+		render(){
+			return <div> 
+						헤더
+						<Gnb />
+				   </div>
+		}
+	}
+
+
+	class Gnb extends React.Component {
+		render(){
+			return <div> 
+						<ul className="gnb">
+							<li className="s1">메뉴</li>
+							<li>메뉴</li>
+							<li>메뉴</li>
+						</ul>
+				   </div>
+		}
+	}
+
+
+
+
+	class Contents extends React.Component {
+		render(){
+			return <div> 
+						컨텐츠
+				   </div>
+		}
+	}
+
+
+	class Footer extends React.Component {
+		render(){
+			return <div> 
+						푸터
+				   </div>
+		}
+	}
+
+
+
+
+
+
+	ReactDOM.render(
+		<div>
+			<Header />
+			<Contents />
+			<Footer />
+		</div>,
+		document.querySelector("#wrap")
+	);
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

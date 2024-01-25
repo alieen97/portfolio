@@ -1,0 +1,77 @@
+
+1. 라우터 설치
+명령프롬프트 창에서 아래와같이 입려하고 엔터
+npm install react-router-dom@6
+
+
+2. 브라우져 미리보기 실행
+npm start
+
+
+3.
+index.js에서
+
+아래의 import 추가하고
+import { BrowserRouter } from "react-router-dom"
+
+<App /> 을
+<BrowserRouter></BrowserRouter>로 감싼다
+
+
+
+4.
+App.js에서
+
+아래의 import 추가하고
+import { Routes, Route, Link } from 'react-router-dom'
+
+
+아래와같이 사용
+
+function App(){
+
+   return(
+       <div className="App">
+
+               <Link to="/">홈</Link>
+               <Link to-"/sub1">서브1</Link>
+               <Link to-"/sub2">서브2</Link>
+
+               <Routes>
+                        <Route path="/" element={ <div>메인입니다</div> } />
+                        <Route path="/sub1" element={ <div>어바웃입니다</div> } />
+                        <Route path="/sub2" element={ <컴포넌트 /> } />
+              </Routes>   
+
+       </div>
+   )
+
+}
+
+
+
+5.
+sub2를 컴포넌트로 구성하는 경우
+src폴더에  Sub2.js를 저장하고 아래와같이 작성
+   
+function Sub2(){
+    return(
+         서브2 내용
+    )
+}   
+
+export default Sub2;
+
+
+6.
+App.js에는서
+
+아래의 import추가
+import Sub2 from './Sub2.js'
+
+
+
+
+
+
+

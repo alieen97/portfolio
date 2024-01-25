@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Generator" content="Visual Studio Code"/>
+        <meta name="Author" content="김혜련"/>
+        <meta name="Keywords" content="김혜련,Kimhyelyeon, 포트폴리오, portfolio, Hyelyeon's portfolio, join, membership, membership jion"/>
+        <meta name="Description" content="membership join"/>
+        <title>Join</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <!--[if lte ie 8]>
+            <link href="css/non-ie9.css" rel="stylesheet">
+        <![endif]-->
+
+        <link rel="icon" sizes="16x16" href="images/green_pavi_ori.gif">
+        <script src="js/main.js"></script> 
+
+    </head>
+    <body>
+        <h1>Join</h1>
+        <div class="wrapper">
+            <div class="addBox">
+                <fieldset class="idWrap">
+                    <label for="id">&#9729; ID</label>
+                    <div class="idInput">
+                        <input type="text" id="id">
+                        <button class="idCheck" title="id 중복검사 구현x">&#10004;</button>
+                    </div>
+                    <div class="massageWrap">
+                        <p class="successMessage hidden">&#10004; 사용할 수 있는 아이디입니다</p>
+                        <p class="failMessage hidden">&#10008; 아이디는 4~12글자이어야 합니다</p>
+                        <p class="failMessage2 hidden">&#10008; 영어 또는 숫자만 가능합니다</p>
+                    </div>
+                </fieldset>
+                <div class="pwWrap">
+                    <fieldset class="pw">
+                        <label for="password">&#9729; PW</label>
+                        <input type="password" id="password">
+                        <p class="checkmsg pwLength hidden">
+                            &#10008; 8글자 이상, 영문, 숫자, 특수문자(@$!%*#?&)를 사용하세요
+                        </p>
+                    </fieldset>
+                    <fieldset class="pwCheck">
+                        <label for="passwordRetype">&#9729; PW check</label>
+                        <input type="password" id="passwordRetype">
+                        <p class="checkmsg pwSpell hidden">
+                            &#10008; 비밀번호가 일치하지 않습니다.
+                        </p>
+                    </fieldset>
+                </div>
+                <button class="submit">submit</button>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; 
+    width: 100%; 
+    height: auto; 
+    background-image: url('../images/bg2.jpg');
+}
+ul, li {
+    list-style: none;
+}
+h1{
+    text-align: center;
+    color: #333;
+}
+input{
+    padding: 15px;
+    border-radius: 2rem;
+    border: 1px solid #ddd;    
+}
+label{
+    color: #777;
+}
+p.successMessage{
+    color: green;
+}
+.hidden{
+    margin:0;
+     width: 1px;
+    height: 1px;
+    position: absolute;
+    left: -9999999px;
+    overflow: hidden;
+} 
+.massageWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.massageWrap > p{
+    margin:0;
+}
+.failMessage,
+.failMessage2,
+.checkmsg{
+    color: darkred;
+    background-color: rgba(255,0,0,.3);
+}
+.wrapper {
+    width: 30vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addBox{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.addBox > fieldset,
+.addBox > div,
+.pwWrap > fieldset{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border: none;
+}
+.addBox > div.pwWrap{
+    gap: 50px;
+}
+.idInput {
+    position: relative;
+}
+.idInput input[type="text"]{
+    width: 100%;
+
+}
+.idInput button{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate( 0%,-50%);
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+    width: 20px;
+    height: 20px;
+}
+button.submit {
+    border-radius: 2rem;
+    padding: 20px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+
+
+

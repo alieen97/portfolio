@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; 
+    width: 100%; 
+    height: auto; 
+    background-image: url('../images/bg2.jpg');
+}
+ul, li {
+    list-style: none;
+}
+h1{
+    text-align: center;
+}
+.wrapper {
+    width: 30vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addBox{
+    display: flex;
+    gap: 10px;
+}
+.addBox input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+}
+.addBox button{ 
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+}
+
+.listCell{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+li.doneList{
+    background-color: rgba(255,0,0,.4);
+    color: #999;
+    position: relative;
+}
+li.doneList:after{
+    content:'';
+    width: 10px;
+    height: 100%;
+    background-color: rgba(255,0,0,.4);
+    position: absolute;
+}
+
+li .deleteBtn{
+    border: none;
+    opacity: .8;
+}

@@ -1,0 +1,78 @@
+///이벤트
+
+	class Counter extends React.Component {
+		constructor(props){
+			super(props);
+
+			this.state = {
+				count:0
+			};
+
+			this.AA = this.AA.bind(this);
+		}
+
+
+		AA(){
+			this.setState({
+				count: this.state.count + 1
+			});
+		}
+
+
+
+
+		render(){
+
+			return(
+				<div>
+					<h1>{ this.state.count }</h1>
+					<button onClick={ this.AA }>버튼</button>
+				</div>	
+			);
+		}
+
+
+
+
+------------function(props)
+
+    //////컨텐츠
+	function Contents(){
+		return <div className="contents">
+				 <h2>title</h2>
+                 <div className="group">
+                    <Box d="설명입니다" />
+                </div>
+			   </div>
+	}
+
+    ////컨텐츠안의 박스
+    function Box(props){
+        return <div className="box">
+                         { props.d }
+                </div>
+
+        }
+
+
+----------이미지
+
+    //////컨텐츠
+	function Contents(){
+		return <div className="contents">
+				 <h2>title</h2>
+                 <div className="group">
+                    <Box d="박스1" g="images/img1.jpg" />
+                </div>
+			   </div>
+	}
+
+    ////컨텐츠안의 박스
+    function Box(props){
+        return <div className="box">
+                        <img src={props.g} alt="" />
+                        <p>{ props.d }</p>
+                </div>
+
+        }
+    

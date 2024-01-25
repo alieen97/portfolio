@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+</style>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<script type="text/babel">
+
+
+	class AA extends React.Component {
+		render(){
+			return <p>안녕하세요 { this.props.속성명 }</p>
+		}
+	}
+	/*
+	props는 properties를 줄인 표현으로 부모 컴포넌트로부터 물려받는 속성이다. 
+	클래스 컴포넌트에서 props에 접근하기 위해서는 this 키워드를 사용하면 된다.
+	이 props값은 해당 컴포넌트를 불러와서 사용하는 부모 컴포넌트에서만 설정할 수 있다. 
+	부모 컴포넌트에서 전달하는 props가 바뀌면 자동으로 업데이트된다.
+	*/
+
+
+	ReactDOM.render(
+		<div>
+			<AA 속성명="값"></AA>
+		</div>,
+		document.querySelector("#wrap")
+	);
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

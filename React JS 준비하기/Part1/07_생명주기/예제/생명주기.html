@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+
+</style>
+
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap"></div>
+
+
+
+<script type="text/babel">
+
+
+
+
+	class Counter extends React.Component {
+		constructor(props){
+			super(props);
+
+			this.state = {
+				count:0
+			};
+
+			this.AA = this.AA.bind(this);
+
+			// alert("가장 먼저 실행되지만 아직 마운트가 되지않아서 요소들을 정상적으로 제어할수없음")
+		}
+
+
+		AA(){
+			this.setState({
+				count: this.state.count + 1
+			});
+		}
+
+
+
+		componentDidMount(){ //시작했을 때 할 일(컴포넌트가 마운트된후 실행)
+			// alert("777");
+			document.querySelector("body").style.background="yellow";
+		}
+
+		componentDidUpdate(){//이벤트 실행 할 때(컴포넌트가 업데이트된후 실행)
+			//alert();
+			document.querySelector("body").style.background="skyblue";
+		}
+
+		render(){
+
+			return(
+				<div>
+					<h1>{ this.state.count }</h1>
+					<button onClick={ this.AA }>버튼</button>
+				</div>	
+			);
+		}
+	}
+
+
+
+
+	ReactDOM.render(
+		<Counter />,
+		document.querySelector("#wrap")
+	);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

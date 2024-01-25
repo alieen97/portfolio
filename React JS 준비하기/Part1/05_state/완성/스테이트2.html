@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+</style>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<script type="text/babel">
+
+
+	class Counter extends React.Component {
+
+		constructor(props){
+			super(props);
+
+			this.state = {
+				a:0
+			};
+
+		}
+
+		componentDidMount(){ //마운트된 직후 실행
+			this.AA();
+		}
+
+		AA(){ //함수
+			alert("안녕하세요");
+		}
+
+		BB(){ //함수
+			alert("감사합니다");
+		}
+
+		render(){
+			return(
+					<h1>{this.state.a}</h1>	
+			);
+		}
+	}
+
+
+
+
+	ReactDOM.render(
+		<div>
+			<Counter />
+		</div>,
+		document.querySelector("#wrap")
+	);
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

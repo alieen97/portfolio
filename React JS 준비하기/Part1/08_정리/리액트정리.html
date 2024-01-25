@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+
+</style>
+
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+	여기에 82번째줄의 컴포넌트가 랜더링됨
+
+</div>
+
+
+
+
+<script type="text/babel">
+
+
+	class Counter extends React.Component { //컴포넌트(컴포넌트명 첫글자는 대문자:파스칼표기법)를 정의
+
+		constructor(props){ 
+			super(props); 
+
+			this.state = { //컴포넌트에서 사용할 스테이트(변수같은거)를 선언
+				count:0
+			};
+
+			this.AA = this.AA.bind(this);//사용할 함수를 바인딩하여 갱신해야 함수의 내용이 반영됨
+		}
+
+
+		AA(){ //컴포넌트에서 사용할 함수 정의
+			this.setState({ //스테이트 값을 수정
+				count: this.state.count + 1
+			});
+		}
+
+
+		componentDidMount(){
+			alert("컴포넌트가 마운트된후 실행");
+			document.querySelector("h1").style.background="yellow";
+		}
+
+		componentDidUpdate(){
+			alert("컴포넌트가 업데이트된후 실행");
+			document.querySelector("h1").style.background="skyblue";
+		}
+
+
+		render(){ //컴포넌트에 보여질 내용
+
+			return( //JSX(html비슷한거)로 작성
+
+				<div>
+					<h1>{this.props.ss} : {this.props.children}</h1>
+
+					<h2>{ this.state.count }</h2> 
+					<button onClick={ this.AA } >버튼</button>
+					
+				</div>	
+
+			);
+
+		}
+
+	}
+
+
+
+
+	ReactDOM.render(
+
+		<Counter ss="카운터">버튼을 클릭하세요</Counter>, //28번째줄의 Counter 컴포넌트를 
+
+		document.querySelector("#wrap") //18번째줄의 wrap으로 랜더링
+
+	);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

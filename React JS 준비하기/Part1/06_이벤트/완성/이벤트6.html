@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+<style>
+
+</style>
+
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+
+<script type="text/babel">
+
+
+	class Counter extends React.Component {
+		constructor(props){
+			super(props);
+
+			this.state = {
+				count:0
+			};
+
+			this.AA = this.AA.bind(this);
+		}
+
+
+		AA(){
+			this.setState({
+				count: this.state.count + 1
+			});
+		}
+
+
+
+
+
+		render(){
+
+			return(
+				<div>
+					<h1>{ this.state.count }</h1>
+					<button onMouseOver={ this.AA } onMouseOut={ this.AA }>버튼</button>
+				</div>	
+			);
+		}
+	}
+
+
+
+
+	ReactDOM.render(
+		<Counter />,
+		document.querySelector("#wrap")
+	);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

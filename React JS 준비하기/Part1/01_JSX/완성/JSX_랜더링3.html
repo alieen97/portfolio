@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>리액트</title>
+
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+</div>
+
+
+<script type="text/babel">
+
+	let k = 123;
+
+	//두개 이상의 요소를 랜더링하려면 div로 감싼다, 단독태그 끝에는 /슬래시
+	let a = <div> 
+				<h1>뽀삐{ k /*중괄호안에 자바스크립트값을 가져올 수 있음*/ }</h1> 
+				<h2>뽀삐</h2>
+				<a href="http://www.naver.com" target="_blank">네이버</a>
+				<img src="images/insta1.jpg" alt="이미지" />
+			</div>
+
+
+	ReactDOM.render(
+		a,
+		document.getElementById("wrap")
+	);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
