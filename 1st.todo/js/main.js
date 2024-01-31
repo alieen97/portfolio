@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let inputBox = document.getElementById('todoField');  // 할 일 입력창
     let addToDo = document.getElementById('addBtn');      // 버튼
     let toDoList = document.getElementById('listBox');    // 할 일 리스트창
+    let alldelet = document.querySelector('.alldelet');    // 할 일 리스트창
     let deletedBtn; //deletedBtn을 전역변수로 선언
     const ENTER = 13; //엔터키의 키보드 코드 변수 선언
     /*
@@ -84,16 +85,30 @@ document.addEventListener('DOMContentLoaded', () => {
             modiInput.value = modiTxt.innerText;// modiList 안의 텍스트를 input안의 값으로 넣기
             modiList.insertBefore(modiInput, modiTxt);//modiInput을 modiTxt 앞에 삽입
             modiTxt.style.display = 'none'; //그리고 modiTxt을 display none
-            
+            deletedBtn.style.display = 'none'; 
+            modifyBtn.style.display = 'none'; 
+
             modiInput.addEventListener('keyup',(e)=>{
                 if(e.keyCode === ENTER){
                     modiTxt.innerText = modiInput.value;
                     modiInput.remove();
                     modiTxt.style.display = 'block'; 
+                    deletedBtn.style.display = 'inline'; 
+                    modifyBtn.style.display = 'inline'; 
                 }
             })
         }
     })
+    alldelet.addEventListener('click',() => {
+        //alert('a');
+        if(confirm("정말 전부 지우시겠습니까?")){
+            toDoList.replaceChildren();
+            alert("정상적으로 삭제하었습니다.");
+        }else{
+            
+        }
+        
+    }) 
 })
 
 /*약간 
