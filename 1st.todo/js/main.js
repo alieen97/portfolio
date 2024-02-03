@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             modifyBtn = document.createElement('button');//수정버튼 선언
             modifyBtn.className = 'modifyBtn';//버튼으로 선언된 수정버튼 클래스네임 추가
-            modifyBtn.textContent = 'edit';//연필모양 텍스트 추가
+            modifyBtn.textContent = 'edit';//edit 텍스트 추가
             btnWrap.appendChild(modifyBtn); //list가 생성될 때 수정버튼 넣기
 
             list.appendChild(listTxt);
@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
     document.addEventListener('click',(event) => {//deletBtn을 전역변수로 설정했으니 
+        allDelBtn = document.querySelectorAll('.deleteBtn');
+        allModiBtn = document.querySelectorAll('.modifyBtn');
         if(event.target.classList.contains('deleteBtn')){ //클릭한 것이 .deleteBtn 룰 가지고 있으면 
             const delList = event.target.closest(".listCell");// 클릭한 요소에서 근접한 .listcell을 찾아
             delList.remove(); //삭제ㅋ
@@ -80,21 +82,38 @@ document.addEventListener('DOMContentLoaded', () => {
             const modiInput = document.createElement('input');//input 선언
             const modiList = event.target.closest(".listCell")//.modifyBtn에 근접하게있는 .listCell 찾기
             const modiTxt = modiList.querySelector('.listCellTxt');//거기에 입력되있는 텍스트 선언
-            //const modiList = event.target.closest(".listCell").querySelector('.listCellTxt').innerText;//클릭한 수정버튼이 있는 리스트의 텍스트내용 받아오기(이렇게 했었는데 나중에 .listCell만 받아올 일도 생겨서 분리함)
+            //const modiList = event.target.closest(".listCell").querySelector('.listCellTxt').innerText;//클릭한 수정버튼이 있는 리스트의 텍스트내용 받아오기 (이렇게 했었는데 나중에 .listCell만 받아올 일도 생겨서 분리함)
             //alert(modiTxt);
             modiInput.value = modiTxt.innerText;// modiList 안의 텍스트를 input안의 값으로 넣기
             modiList.insertBefore(modiInput, modiTxt);//modiInput을 modiTxt 앞에 삽입
-            modiTxt.style.display = 'none'; //그리고 modiTxt을 display none
-            deletedBtn.style.display = 'none'; 
-            modifyBtn.style.display = 'none'; 
+            modiInput.focus();
+            modiTxt.innerText = ' '; //그리고 modiTxt을 display none
+
+            allDelBtn.forEach(btn => {
+                btn.style.display = 'none';
+            });
+            allModiBtn.forEach(btn => {
+                btn.style.display = 'none';
+            });
+
+
+            //allDelBtn.style.display = 'none'; (수정하는 동안 삭제 못하게 하기 위해서 삭제버튼 숨기기) 이렇게 했더니 .allDelBtn가 있는 애들을 다 불러온거다 보니 그 안에서 어떤걸 숨길지 잘 못찾음. 그래서 each문으로 해당 클래스 있는 애들 하나하나 순환하면서 해당 클래스 가진 애들을 다 숨길 수 있게 함.
+            //allModiBtn.style.display = 'none'; //엔터버튼으로만 완료할 수 있게 ㅎㅎ.. 숨기기
 
             modiInput.addEventListener('keyup',(e)=>{
                 if(e.keyCode === ENTER){
                     modiTxt.innerText = modiInput.value;
                     modiInput.remove();
                     modiTxt.style.display = 'block'; 
-                    deletedBtn.style.display = 'inline'; 
-                    modifyBtn.style.display = 'inline'; 
+
+                    allDelBtn.forEach(btn => {
+                        btn.style.display = 'inline';
+                    });
+                    allModiBtn.forEach(btn => {
+                        btn.style.display = 'inline';
+                    });
+                    //allDelBtn.style.display = 'inline'; 
+                    //allModiBtn.style.display = 'inline'; 
                 }
             })
         }
@@ -102,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
     alldelet.addEventListener('click',() => {
         //alert('a');
         if(confirm("정말 전부 지우시겠습니까?")){
-            toDoList.replaceChildren();
-            alert("정상적으로 삭제하었습니다.");
+            toDoList.replaceChildren(); // toDoList 안에 자식요소를 replace 속성으로 비우기
+            alert("정상적으로 삭제하었습니다."); //비운 후 알럿창으로 정상삭제 알리기
         }else{
-            
+            //취소했을 때엔 그냥 아무동작 x
         }
         
     }) 
