@@ -22,8 +22,19 @@ input{
     border-radius: 2rem;
     border: 1px solid #ddd;    
 }
+input[id="email_id"]{
+    width: 70%;
+}
+select {
+    padding: 12px;
+    border-radius: 2rem;
+}
 label{
     color: #777;
+}
+fieldset{
+    padding:0;
+    border: none;
 }
 p.successMessage{
     color: green;
@@ -40,7 +51,6 @@ p.successMessage{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
 }
 
 .massageWrap > p{
@@ -54,6 +64,7 @@ p.successMessage{
 }
 .wrapper {
     width: 30vw;
+    min-width: 480px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -61,7 +72,7 @@ p.successMessage{
 }
 .addBox{
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-direction: column;
 }
 .addBox > fieldset,
@@ -72,8 +83,16 @@ p.successMessage{
     flex-direction: column;
     border: none;
 }
+fieldset.email{
+    border: none;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .addBox > div.pwWrap{
-    gap: 50px;
+    gap: 10px;
 }
 .idInput {
     position: relative;
@@ -92,12 +111,28 @@ p.successMessage{
     width: 20px;
     height: 20px;
 }
-button.submit {
+
+fieldset.phone{
+    display: flex;
+    gap: 7px;
+}
+fieldset.phone input:first-child{
+    width: 30%;
+}
+button#submit,
+button#clear {
     border-radius: 2rem;
     padding: 20px;
     border: 1px solid #ddd;
     font-weight: bold;
     margin-top: 40px;
+}
+button#submit{
+    background-color: rgb(190, 237, 255);
+}
+button#clear {
+    margin-top: 10px;
+    background-color: rgb(255, 251, 211);
 }
 
 
