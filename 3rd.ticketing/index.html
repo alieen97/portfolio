@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Generator" content="Visual Studio Code"/>
+        <meta name="Author" content="김혜련"/>
+        <meta name="Keywords" content="김혜련,Kimhyelyeon, 포트폴리오, portfolio, Hyelyeon's portfolio, Ticketing, movie"/>
+        <meta name="Description" content="Ticketing"/>
+        <title>Join</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <!--[if lte ie 8]>
+            <link href="css/non-ie9.css" rel="stylesheet">
+        <![endif]-->
+
+        <link rel="icon" sizes="16x16" href="images/green_pavi_ori.gif">
+        <script src="js/main.js"></script> 
+    </head>
+    <body>
+        <h1>Ticketing</h1>
+        <div class="wrapper">
+            <div class="posterWrap">
+                <div class="none active"></div>
+                <div class="hana"></div>
+                <div class="farewell"></div>
+                <div class="momoco"></div>
+                <div class="dune"></div>
+            </div>
+            <div class="multiWrap">
+                <fieldset class="movieSelwrap">
+                    <label for="selecMovie">&#127909; : </label>
+                    <select name="selecMovie" id="selecMovie">
+                        <option class="movie" value="">Select Movie</option>
+                        <option class="movie" value="9">The Case of Hana & Alice (&#8361; 9,000)</option>
+                        <option class="movie" value="11">Farewell My Concubine (&#8361; 11,000)</option>
+                        <option class="movie" value="8">Kamikaze Girls (&#8361; 8,000)</option>
+                        <option class="movie" value="12">DUNE (&#8361; 12,000)</option>
+                    </select>
+                </fieldset>
+                <ul class="seatOption">
+                    <li>
+                        <div class="seat noneSeat"></div>
+                        <p>N/A</p>
+                    </li>
+                    <li>
+                        <div class="seat selecSeat"></div>
+                        <p>Selected Seat</p>
+                    </li>
+                    <li>
+                        <div class="seat fullSeat"></div>
+                        <p>Occupied Seat</p>
+                    </li>
+                </ul>
+                <div class="screen"></div>
+                <div class="seatWrap">
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat"></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat fullSeat"></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="seat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat"></span>
+                        <span class="seat fullSeat"></span>
+                        <span class="seat"></span>
+                    </div>
+                </div>
+                <p class="text">
+                    <span id="count">0</span> 좌석 선택. 
+                    </br>총 &#8361;<span id="costs">0</span>
+                </p>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
