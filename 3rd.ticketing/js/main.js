@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let count = document.getElementById('count'); //인원수 선언
     let price = document.getElementById('price'); //가격 선언
+
+    seatWrap.addEventListener('click', (e) => {
+        if ( e.target.className === 'seat'){
+            e.target.classList.add('selecSeat');
+        }else{
+            e.target.classList.remove('selecSeat')
+        }
+    })
 })
 
 
