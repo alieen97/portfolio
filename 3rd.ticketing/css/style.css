@@ -57,20 +57,31 @@ fieldset{
     overflow: hidden;
 } 
 
-.posterWrap > div{
+.poster{
     width: 350px;
     height: 500px;
     display: none;
     border-radius: 20px;
-}
-.posterWrap > div.active{
+
     display: block;
 }
-.posterWrap > div.none{
+.poster0{
     background-color: #ddd;
 }
-.posterWrap > div.hana{
+.poster1{
     background-image: url("../images/hana.jpg");
+    background-size: cover;
+}
+.poster2{
+    background-image: url("../images/farewell.jpg");
+    background-size: cover;
+}
+.poster3{
+    background-image: url("../images/momoco.jpg");
+    background-size: cover;
+}
+.poster4{
+    background-image: url("../images/dune.jpg");
     background-size: cover;
 }
 
